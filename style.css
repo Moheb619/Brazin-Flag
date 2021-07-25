@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("brazilwal.jpg"), url("Brasil-Neymar.jpg");
+  background-size: 60% 120vh;
+  background-position: left center, top right;
+  background-repeat: no-repeat, no-repeat;
+  padding: 15px;
+}
+p {
+  position: relative;
+  height: 550px;
+  width: 1100px;
+  left: -1000px;
+  top: -60px;
+  background-color: green;
+  animation-name: greenFlag;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes greenFlag {
+  0% {
+    left: -1000px;
+    top: -60px;
+  }
+  25% {
+    left: 520px;
+    top: 0px;
+    transform: rotateZ(90deg);
+  }
+  50% {
+    left: 520px;
+    top: 200px;
+    transform: rotateZ(180deg);
+  }
+  75% {
+    left: 200px;
+    top: 200px;
+    transform: rotateZ(270deg);
+  }
+  100% {
+    left: 150px;
+    top: 60px;
+    transform: rotateZ(360deg);
+  }
+}
+p::before {
+  content: "";
+  background-color: yellow;
+  position: absolute;
+  width: 32vw;
+  height: 32vw;
+  top: 0px;
+  left: 4000px;
+  animation-name: yellowpart;
+  animation-duration: 8s;
+  animation-delay: 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes yellowpart {
+  0% {
+    top: 0px;
+    left: 2000px;
+    transform: rotate(0deg) skew(-5deg, -16deg);
+  }
+  25% {
+    transform: rotate(120deg) skew(-5deg, -16deg);
+  }
+  50% {
+    transform: rotate(250deg) skew(-5deg, -16deg);
+  }
+  75% {
+    transform: rotate(360deg) skew(-5deg, -16deg);
+  }
+  100% {
+    top: 50px;
+    left: 330px;
+    transform: rotate(412deg) skew(-5deg, -16deg);
+  }
+}
+p::after {
+  content: "";
+  background-image: url("brazil.png");
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  left: -800px;
+  animation-name: ball;
+  animation-duration: 8s;
+  animation-delay: 16s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes ball {
+  0% {
+    top: 180px;
+    left: -800px;
+  }
+
+  20% {
+    top: 100px;
+    transform: rotate(45deg);
+  }
+  30% {
+    top: 180px;
+    transform: rotate(90deg);
+  }
+  40% {
+    top: 100px;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: 180px;
+    transform: rotate(180deg);
+  }
+  60% {
+    top: 100px;
+    transform: rotate(225deg);
+  }
+  80% {
+    top: 180px;
+    transform: rotate(270deg);
+  }
+  90% {
+    top: 100px;
+    transform: rotate(315deg);
+  }
+  100% {
+    top: 180px;
+    left: 465px;
+    transform: rotate(360deg);
+  }
+}
+img {
+  position: absolute;
+  left: 1100px;
+  visibility: hidden;
+  animation-name: cup;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 25s;
+  animation-fill-mode: forwards;
+}
+@keyframes cup {
+  0% {
+    visibility: visible;
+    height: 0px;
+    width: 0px;
+    top: 320px;
+  }
+  100% {
+    top: 160px;
+    height: 400px;
+    width: 120px;
+    visibility: visible;
+  }
+}
